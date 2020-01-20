@@ -12,7 +12,7 @@ use Symfony\Bundle\FrameworkBundle\Controller\Controller;
 /**
  * Class CommentAdminController
  *
- * @IsGranted("ROLE_ADMIN")
+ * @IsGranted("ROLE_ADMIN_COMMENT")
  * @package App\Controller
  */
 class CommentAdminController extends Controller
