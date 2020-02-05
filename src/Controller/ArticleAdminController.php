@@ -40,7 +40,8 @@ class ArticleAdminController extends AbstractController
         echo $article->getAuthor();
         echo "<br />";
         echo $this->getUser();
-        if($article->getAuthor() != $this->getUser() && !$this->isGranted('ROLE_ADMIN_ARTICLE')){
+        //if($article->getAuthor() != $this->getUser() && !$this->isGranted('ROLE_ADMIN_ARTICLE')){
+        if($this->isGranted('MANAGE', $article)){
             throw $this->createAccessDeniedException('No Access');
         }
         dd($article);
